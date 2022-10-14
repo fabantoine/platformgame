@@ -3,6 +3,8 @@ from ground import Ground
 
 pygame.init()                                   # Initialisation de pygame
 pygame.display.set_caption("Titre")             # Titre de la fenetre
+icon = pygame.image.load("my_icon.png")         # Charger une image
+pygame.display.set_icon(icon)                   # Chanher l'icone de la fenêtre
 screen = pygame.display.set_mode((400, 400))    # Taile de la fenetre
 ground = Ground(screen)
 
@@ -10,7 +12,7 @@ background = pygame.image.load("fond.jpg")      # Chargement de l'image dans la 
 
 
 running = True
-i=0
+
 while running:
     screen.fill((0, 0, 0))                      # Remplissage en noir pour graphisme
     screen.blit(background, (0, 0))             # Affichage de background
