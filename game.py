@@ -6,7 +6,7 @@ class Game:
     def __init__(self, screen):
         self.screen = screen
         self.ground = Ground(screen)
-        self.background = pygame.image.load("fond.jpg")      # Chargement de l'image dans la variable
+        self.background = pygame.image.load("data/background/fond.jpg")      # Chargement de l'image dans la variable
         self.player = Player()
 
     def update_game(self):
