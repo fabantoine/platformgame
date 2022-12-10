@@ -7,7 +7,7 @@ pygame.init()
 pygame.display.set_caption("Titre")             # Titre de la fenetre
 icon = pygame.image.load("my_icon.png")         # Charger une image
 pygame.display.set_icon(icon)                   # Chanher l'icone de la fenêtre
-screen = pygame.display.set_mode((400, 400))    # Taile de la fenetre
+screen = pygame.display.set_mode((800, 400))    # Taile de la fenetre
 game = Game(screen)
 
 running = True
@@ -19,3 +19,7 @@ while running:
         if event.type == pygame.QUIT:           # si le type d'evenement est quit
             running = False
             pygame.quit()                       # Quiter Pygame
+        elif event.type == pygame.KEYDOWN:      # si une touche est enfocée
+            game.input[event.key] = True        # mettre dans le dictionnaire la touche = vrai
+        elif event.type == pygame.KEYUP:
+            game.input[event.key] = False
