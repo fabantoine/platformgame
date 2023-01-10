@@ -20,8 +20,8 @@ class Game:
         self.screen.blit(self.background, (0, 0))               # Affichage de background
         self.screen.blit(self.ground.surface, self.ground.rect)
         self.screen.blit(self.player.image, self.player.rect)
-        self.player.update_player(self.delta_time)                             # Mise à jour du joueur
-        if self.input.get(pygame.K_LEFT):
+        self.player.update_player(self.delta_time)              # Mise à jour du joueur
+        if self.input.get(pygame.K_LEFT):                       # Récuperer la flèche de gauche
             self.player.move_left()
-        elif self.input.get(pygame.K_RIGHT):
+        elif self.input.get(pygame.K_RIGHT):                    # Récupérer la flèche de droite
             self.player.move_right()
