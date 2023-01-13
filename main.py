@@ -1,13 +1,14 @@
 import time
 import pygame
 from game import Game
+from settings import *
 
 pygame.init()
 # Initialisation de pygame
 pygame.display.set_caption("Titre")             # Titre de la fenetre
 icon = pygame.image.load("my_icon.png")         # Charger une image
 pygame.display.set_icon(icon)                   # Chanher l'icone de la fenêtre
-screen = pygame.display.set_mode((800, 400))    # Taile de la fenetre
+screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))    # Taile de la fenetre
 game = Game(screen)
 
 running = True
